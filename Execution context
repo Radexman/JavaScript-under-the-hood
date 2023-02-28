@@ -1,0 +1,40 @@
+# **Execution Context**
+
+When the JavaScript engine scans a script file, it makes an environment called the **Execution Context** that handles the entire trafsformation and execution of the code.
+During the context runtime, the parser parses the source code and allocates memory for the variables and functions. The source code is generated and gets executed.
+
+## **Two contexts**
+
+There are two types of execution contexts: **global** and **function**.
+
+### **Global context**
+
+The global execution context is created when a JavaScript script first starts to run, and it represents the global scope in JavaScript.
+
+### **Function context**
+
+A function execution context is created whenever a function is called, representing the function's local scope.
+
+---
+
+## **Phases of the JavaScript Execution Context**
+
+There are two phases of JavaScript execution context:
+
+1. **Creation phase** - In this phase, the JavaScript engine creates the execution context and sets up the script's enviroment. It determines the values of variables and functions and sets up the scope chain for the execution context.
+
+2. **Execution phase** - In this phase, the JavaScript engine executes the code in the execution context. It processes any statements or expressions in the script and evaluates any function calls.
+
+## **Creation Phase**
+
+At the very begginning, the JavaScript engine executes the entire source code, creates a global execution context, and then does the following things:
+
+1. Creates a global object that is **window** in the browser and **global** in Node.js and creates _this_ object.
+2. Sets up a memory for storing variables and functions.
+3. Stores the variables with values as undefined and function references.
+
+After this creation phase, the execution context will move to the code execution phase.
+
+## **Execution Phase**
+
+Now, in this phase, it starts going through the entire code line by line from top to bottom.
